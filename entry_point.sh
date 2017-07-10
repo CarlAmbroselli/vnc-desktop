@@ -31,6 +31,6 @@ sudo -E -i -u user \
   x11vnc -display $DISPLAY -bg -nopw -xkb -usepw -shared -repeat -loop -forever &
 
 sudo -E -i -u user \
-  /opt/google/chrome/google-chrome --no-default-browser-check &
+  /opt/google/chrome/google-chrome --no-sandbox --no-default-browser-check &
 
 wait $NODE_PID
