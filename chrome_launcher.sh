@@ -81,6 +81,6 @@ exec 2> >(exec cat >&2)
 
 # Note: exec -a below is a bashism.
 # the --no-sandbox flag here.
-exec -a "$0" "$HERE/chrome" "$PROFILE_DIRECTORY_FLAG" \
+exec -a "$0" "$HERE/chrome" --no-sandbox "$PROFILE_DIRECTORY_FLAG" \
   "$@"
 exec -a "$0" /etc/alternatives/google-chrome --no-sandbox "$@"
